@@ -1,0 +1,34 @@
+/* OpenGov India — unmistakable 3D interface layer */
+:root{--u1:#061a2d;--u2:#0b5cab;--u3:#2aa7ff;--glass:rgba(255,255,255,.78)}
+body{background:radial-gradient(circle at 15% 10%,#d9efff 0,transparent 24%),radial-gradient(circle at 90% 25%,#d8e8ff 0,transparent 25%),#eef4f9;overflow-x:hidden}
+header{box-shadow:0 12px 35px rgba(4,27,49,.14);backdrop-filter:blur(14px)}
+.hero{min-height:720px!important;grid-template-columns:1.05fr .95fr!important;gap:35px!important;background:linear-gradient(135deg,#dcefff 0%,#fff 42%,#dcecff 100%)!important}
+.hero-copy{transform:translateZ(40px)}
+.hero h1{text-shadow:0 3px 0 #fff,0 14px 28px rgba(5,42,75,.13)}
+.hero-visual{min-height:570px!important;transform-style:preserve-3d!important;perspective:1500px!important}
+.hero-visual:after{content:"";position:absolute;width:470px;height:470px;border-radius:50%;background:conic-gradient(from 20deg,rgba(42,167,255,.2),transparent 25%,rgba(11,92,171,.16),transparent 60%,rgba(42,167,255,.2));filter:blur(1px);animation:spinUltra 18s linear infinite;transform:translateZ(-40px) rotateX(70deg)}
+.hero-card{width:410px!important;min-height:310px;z-index:8!important;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(230,243,253,.72))!important;border:1px solid rgba(255,255,255,.9)!important;border-radius:28px!important;box-shadow:34px 38px 0 rgba(7,48,83,.07),0 50px 90px rgba(6,38,69,.3),inset 0 2px 0 white!important;transform:perspective(1300px) rotateY(-20deg) rotateX(9deg) rotateZ(2deg) translateZ(80px)!important;animation:ultraCard 5s ease-in-out infinite!important}
+.hero-card:before{background:linear-gradient(120deg,rgba(255,255,255,.9),transparent 30%,rgba(42,167,255,.12) 70%,transparent)!important}
+.hero-card:after{content:"";position:absolute;left:10%;right:10%;bottom:-25px;height:25px;background:rgba(4,27,49,.22);filter:blur(18px);border-radius:50%;transform:translateZ(-60px)}
+.float-card{border-radius:20px!important;padding:17px 19px!important;box-shadow:14px 18px 0 rgba(6,40,70,.07),0 28px 55px rgba(8,48,84,.24)!important}
+.float-top{transform:perspective(800px) rotateY(-24deg) rotateX(10deg) rotateZ(5deg)!important;right:-18px!important}
+.float-bottom{transform:perspective(800px) rotateY(24deg) rotateX(10deg) rotateZ(-5deg)!important;left:-35px!important}
+.depth-node{width:58px!important;height:58px!important;border-radius:17px!important;box-shadow:10px 13px 0 rgba(6,47,82,.12),0 24px 35px rgba(6,47,82,.25)!important}
+.node-one{right:4%!important;bottom:5%!important}
+.node-two{left:5%!important;top:12%!important}
+.orbit-a{width:510px!important;height:210px!important;border:2px solid rgba(11,92,171,.2)!important}
+.orbit-b{width:420px!important;height:420px!important;border:2px solid rgba(11,92,171,.12)!important}
+.stats div,.trust-strip div{background:linear-gradient(145deg,#fff,#edf5fb)!important;box-shadow:inset 0 1px white,0 9px 22px rgba(7,43,75,.06);transform:translateZ(15px)}
+.card,.scheme-grid article,.report-grid article,.process-grid article,.panel,.money div,.flow{box-shadow:10px 12px 0 rgba(7,43,75,.045),0 22px 42px rgba(7,43,75,.1),inset 0 1px white!important;border-radius:20px!important}
+.card:hover,.scheme-grid article:hover,.report-grid article:hover,.process-grid article:hover{transform:translateY(-12px) rotateX(4deg) rotateY(-2deg) scale(1.015)!important}
+.section-head h2,h2{ text-shadow:0 2px 0 #fff,0 8px 18px rgba(16,35,63,.08)}
+.map{position:relative;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.map:before{content:"";position:absolute;width:600px;height:600px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-150px;top:-250px;transform:rotateX(65deg);box-shadow:0 0 0 70px rgba(255,255,255,.025),0 0 0 140px rgba(255,255,255,.02)}
+.fake-map{transform:perspective(1200px) rotateX(16deg) rotateY(-10deg) rotateZ(1deg) translateZ(20px)!important;box-shadow:22px 28px 0 rgba(0,0,0,.12),0 42px 75px rgba(0,0,0,.35)!important}
+.fake-map span{animation:pinUltra 2.2s ease-in-out infinite}
+.report-form{box-shadow:inset 0 20px 60px rgba(8,54,91,.04)}
+@keyframes ultraCard{0%,100%{transform:perspective(1300px) rotateY(-20deg) rotateX(9deg) rotateZ(2deg) translate3d(0,0,80px)}50%{transform:perspective(1300px) rotateY(-13deg) rotateX(5deg) rotateZ(1deg) translate3d(0,-16px,100px)}}
+@keyframes spinUltra{to{rotate:360deg}}
+@keyframes pinUltra{0%,100%{translate:0 0;scale:1}50%{translate:0 -8px;scale:1.12}}
+@media(max-width:800px){.hero{grid-template-columns:1fr!important;min-height:auto!important}.hero-visual{min-height:500px!important}.hero-card{width:min(350px,88%)!important;transform:perspective(900px) rotateY(-10deg) rotateX(5deg)!important}.float-top{right:-5px!important}.float-bottom{left:-5px!important}.orbit-a{width:360px!important}.orbit-b{width:300px!important;height:300px!important}.depth-node{display:none!important}}
+@media(prefers-reduced-motion:reduce){.hero-card,.hero-visual:after,.fake-map span{animation:none!important}.hero-card{transform:none!important}}
