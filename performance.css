@@ -1,0 +1,46 @@
+/* OpenGov India — performance-first visual polish
+   Keeps the premium 3D identity while removing the expensive layers that caused scroll/render jank. */
+html{scroll-behavior:auto}
+body{perspective:none!important}
+body:before{display:none!important}
+.hero{contain:layout paint;content-visibility:auto;contain-intrinsic-size:720px}
+.hero:before,.hero:after{animation:none!important;filter:none!important}
+.hero-copy{transform:none!important}
+.hero-visual{contain:layout paint;perspective:1400px!important}
+.hero-visual:before,.hero-visual:after{animation:none!important;filter:none!important}
+.civic-command{contain:layout paint!important;isolation:isolate!important}
+.command-sky{box-shadow:0 18px 35px rgba(5,42,72,.08),inset 0 1px #fff!important}
+.command-floor{box-shadow:none!important}
+.command-floor:after{opacity:.28!important}
+.civic-command .orbit-a,.civic-command .orbit-b{animation:none!important}
+.panel-main,.panel-float.one,.panel-float.two,.panel-float.three,.command-node,.command-signal{animation:none!important;will-change:auto!important}
+.panel-main{transform:translate(-50%,-50%) perspective(1400px) rotateY(-14deg) rotateX(6deg) translateZ(95px)!important}
+.panel-float.one{transform:perspective(900px) rotateY(-22deg) rotateX(7deg) rotateZ(3deg) translateZ(145px)!important}
+.panel-float.two{transform:perspective(900px) rotateY(22deg) rotateX(7deg) rotateZ(-5deg) translateZ(130px)!important}
+.panel-float.three{transform:perspective(900px) rotateY(-18deg) rotateX(7deg) rotateZ(-3deg) translateZ(115px)!important}
+.command-signal{opacity:.7!important;box-shadow:0 0 0 3px rgba(68,197,255,.07),0 0 9px rgba(68,197,255,.3)!important}
+.command-panel,.command-sky,.float-card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.card,.scheme-grid article,.report-grid article,.process-grid article,.panel,.money div,.flow,.stats div,.trust-strip div{box-shadow:0 8px 22px rgba(16,35,63,.065),inset 0 1px #fff!important}
+.card:hover,.scheme-grid article:hover,.report-grid article:hover,.process-grid article:hover{transform:translateY(-4px)!important;box-shadow:0 13px 28px rgba(16,35,63,.09),inset 0 1px #fff!important}
+.fake-map{filter:none!important;box-shadow:0 22px 42px rgba(0,0,0,.22)!important}
+.fake-map span{animation:none!important;filter:none!important}
+.stats div:hover,.money div:hover,.flow div:hover{transform:translateY(-3px)!important}
+@media(max-width:900px){
+ .hero{content-visibility:visible}
+ .hero-visual{min-height:540px!important;perspective:1000px!important}
+ .command-floor{display:none!important}
+ .command-sky{box-shadow:inset 0 1px #fff!important}
+ .panel-main{transform:translate(-50%,-50%) perspective(1000px) rotateY(-8deg) rotateX(3deg) translateZ(45px)!important}
+ .panel-float.one{transform:perspective(800px) rotateY(-10deg) translateZ(60px)!important}
+ .panel-float.two{transform:perspective(800px) rotateY(10deg) translateZ(55px)!important}
+ .panel-float.three{transform:perspective(800px) rotateY(-8deg) translateZ(50px)!important}
+}
+@media(max-width:600px){
+ .hero-visual{min-height:500px!important}
+ .panel-main{width:300px!important;min-height:210px!important;padding:20px!important}
+ .panel-main>strong{font-size:42px!important}
+ .panel-float{min-width:110px!important;padding:11px!important;border-radius:14px!important}
+ .panel-float b{font-size:20px!important}
+ .command-signal{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
