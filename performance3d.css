@@ -1,0 +1,45 @@
+/* OpenGov India — performance + polish layer
+   Keeps the signature 3D identity while reducing GPU/compositor pressure. */
+
+/* The page already has several visual layers. Keep only the useful 3D depth. */
+body{perspective:none}
+
+/* Promote only the moving 3D objects, not every card on the page. */
+.civic-command,.command-panel,.command-tower,.city-block,.command-node,.command-orbit{will-change:auto}
+.civic-command .panel-main,.civic-command .panel-float,.civic-command .command-orbit,.civic-command .command-node{will-change:transform}
+
+/* Avoid costly backdrop blurs and large filtered shadows. */
+.civic-command *{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.command-tower{filter:drop-shadow(8px 12px 12px rgba(3,39,67,.12))}
+.command-signal{box-shadow:0 0 0 5px rgba(68,197,255,.09),0 0 12px rgba(68,197,255,.45)}
+
+/* Keep the 3D floor crisp without a giant composited layer. */
+.command-floor:after{opacity:.42;background-size:32px 32px}
+
+/* Reduce continuous work on ordinary content. */
+.hero:before{animation-duration:42s}
+.hero-visual:before{animation-duration:18s}
+
+/* Interaction depth is preserved, but avoid expensive scaling on every card. */
+.card:hover,.scheme-grid article:hover,.report-grid article:hover,.process-grid article:hover{transform:translate3d(0,-8px,0) rotateX(2deg)!important}
+
+/* Touch devices: static 3D composition is much smoother and still visibly 3D. */
+@media (hover:none),(max-width:900px){
+  .hero:before,.hero-visual:before,.civic-command .orbit-a,.civic-command .orbit-b,
+  .civic-command .panel-main,.civic-command .panel-float,.civic-command .command-node,
+  .command-signal{animation:none!important}
+  .command-signal{display:none}
+  .hero-card,.panel-main{will-change:auto}
+}
+
+/* Low-power / accessibility preference. */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* Prevent accidental horizontal overflow from 3D depth. */
+html,body{overflow-x:hidden}
+
+/* Make the independent status impossible to miss without making the site look governmental. */
+.top{letter-spacing:.01em}
+footer{border-top:1px solid rgba(10,48,80,.12)}
