@@ -1,34 +1,37 @@
-/* OpenGov India — unmistakable 3D interface layer */
-:root{--u1:#061a2d;--u2:#0b5cab;--u3:#2aa7ff;--glass:rgba(255,255,255,.78)}
-body{background:radial-gradient(circle at 15% 10%,#d9efff 0,transparent 24%),radial-gradient(circle at 90% 25%,#d8e8ff 0,transparent 25%),#eef4f9;overflow-x:hidden}
-header{box-shadow:0 12px 35px rgba(4,27,49,.14);backdrop-filter:blur(14px)}
-.hero{min-height:720px!important;grid-template-columns:1.05fr .95fr!important;gap:35px!important;background:linear-gradient(135deg,#dcefff 0%,#fff 42%,#dcecff 100%)!important}
-.hero-copy{transform:translateZ(40px)}
-.hero h1{text-shadow:0 3px 0 #fff,0 14px 28px rgba(5,42,75,.13)}
-.hero-visual{min-height:570px!important;transform-style:preserve-3d!important;perspective:1500px!important}
-.hero-visual:after{content:"";position:absolute;width:470px;height:470px;border-radius:50%;background:conic-gradient(from 20deg,rgba(42,167,255,.2),transparent 25%,rgba(11,92,171,.16),transparent 60%,rgba(42,167,255,.2));filter:blur(1px);animation:spinUltra 18s linear infinite;transform:translateZ(-40px) rotateX(70deg)}
-.hero-card{width:410px!important;min-height:310px;z-index:8!important;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(230,243,253,.72))!important;border:1px solid rgba(255,255,255,.9)!important;border-radius:28px!important;box-shadow:34px 38px 0 rgba(7,48,83,.07),0 50px 90px rgba(6,38,69,.3),inset 0 2px 0 white!important;transform:perspective(1300px) rotateY(-20deg) rotateX(9deg) rotateZ(2deg) translateZ(80px)!important;animation:ultraCard 5s ease-in-out infinite!important}
-.hero-card:before{background:linear-gradient(120deg,rgba(255,255,255,.9),transparent 30%,rgba(42,167,255,.12) 70%,transparent)!important}
-.hero-card:after{content:"";position:absolute;left:10%;right:10%;bottom:-25px;height:25px;background:rgba(4,27,49,.22);filter:blur(18px);border-radius:50%;transform:translateZ(-60px)}
-.float-card{border-radius:20px!important;padding:17px 19px!important;box-shadow:14px 18px 0 rgba(6,40,70,.07),0 28px 55px rgba(8,48,84,.24)!important}
-.float-top{transform:perspective(800px) rotateY(-24deg) rotateX(10deg) rotateZ(5deg)!important;right:-18px!important}
-.float-bottom{transform:perspective(800px) rotateY(24deg) rotateX(10deg) rotateZ(-5deg)!important;left:-35px!important}
-.depth-node{width:58px!important;height:58px!important;border-radius:17px!important;box-shadow:10px 13px 0 rgba(6,47,82,.12),0 24px 35px rgba(6,47,82,.25)!important}
-.node-one{right:4%!important;bottom:5%!important}
-.node-two{left:5%!important;top:12%!important}
-.orbit-a{width:510px!important;height:210px!important;border:2px solid rgba(11,92,171,.2)!important}
-.orbit-b{width:420px!important;height:420px!important;border:2px solid rgba(11,92,171,.12)!important}
-.stats div,.trust-strip div{background:linear-gradient(145deg,#fff,#edf5fb)!important;box-shadow:inset 0 1px white,0 9px 22px rgba(7,43,75,.06);transform:translateZ(15px)}
-.card,.scheme-grid article,.report-grid article,.process-grid article,.panel,.money div,.flow{box-shadow:10px 12px 0 rgba(7,43,75,.045),0 22px 42px rgba(7,43,75,.1),inset 0 1px white!important;border-radius:20px!important}
-.card:hover,.scheme-grid article:hover,.report-grid article:hover,.process-grid article:hover{transform:translateY(-12px) rotateX(4deg) rotateY(-2deg) scale(1.015)!important}
-.section-head h2,h2{ text-shadow:0 2px 0 #fff,0 8px 18px rgba(16,35,63,.08)}
-.map{position:relative;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
-.map:before{content:"";position:absolute;width:600px;height:600px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-150px;top:-250px;transform:rotateX(65deg);box-shadow:0 0 0 70px rgba(255,255,255,.025),0 0 0 140px rgba(255,255,255,.02)}
-.fake-map{transform:perspective(1200px) rotateX(16deg) rotateY(-10deg) rotateZ(1deg) translateZ(20px)!important;box-shadow:22px 28px 0 rgba(0,0,0,.12),0 42px 75px rgba(0,0,0,.35)!important}
-.fake-map span{animation:pinUltra 2.2s ease-in-out infinite}
-.report-form{box-shadow:inset 0 20px 60px rgba(8,54,91,.04)}
-@keyframes ultraCard{0%,100%{transform:perspective(1300px) rotateY(-20deg) rotateX(9deg) rotateZ(2deg) translate3d(0,0,80px)}50%{transform:perspective(1300px) rotateY(-13deg) rotateX(5deg) rotateZ(1deg) translate3d(0,-16px,100px)}}
-@keyframes spinUltra{to{rotate:360deg}}
-@keyframes pinUltra{0%,100%{translate:0 0;scale:1}50%{translate:0 -8px;scale:1.12}}
-@media(max-width:800px){.hero{grid-template-columns:1fr!important;min-height:auto!important}.hero-visual{min-height:500px!important}.hero-card{width:min(350px,88%)!important;transform:perspective(900px) rotateY(-10deg) rotateX(5deg)!important}.float-top{right:-5px!important}.float-bottom{left:-5px!important}.orbit-a{width:360px!important}.orbit-b{width:300px!important;height:300px!important}.depth-node{display:none!important}}
-@media(prefers-reduced-motion:reduce){.hero-card,.hero-visual:after,.fake-map span{animation:none!important}.hero-card{transform:none!important}}
+/* OpenGov India — premium civic command-center visual system */
+:root{--c1:#071b31;--c2:#0a5ea8;--c3:#55c8ff;--ink:#071a2b}
+body{background:radial-gradient(circle at 18% 8%,rgba(80,190,255,.22),transparent 26%),radial-gradient(circle at 82% 18%,rgba(15,86,160,.16),transparent 28%),linear-gradient(180deg,#eef7fd,#f7fafc 45%,#e9f1f7);color:var(--ink)}
+.hero{position:relative!important;isolation:isolate;overflow:hidden!important;background:linear-gradient(135deg,#e5f5ff 0%,#fff 46%,#dcecf8 100%)!important;border:1px solid rgba(255,255,255,.9);box-shadow:0 28px 70px rgba(5,39,68,.12),inset 0 1px #fff!important}
+.hero:before{content:"";position:absolute;inset:-30%;z-index:-1;background:conic-gradient(from 180deg at 50% 50%,transparent 0 24%,rgba(49,177,244,.08) 25% 27%,transparent 28% 48%,rgba(7,86,153,.06) 49% 51%,transparent 52% 74%,rgba(49,177,244,.08) 75% 77%,transparent 78%);animation:commandSpin 28s linear infinite}
+.hero:after{content:"";position:absolute;z-index:-1;width:720px;height:720px;right:-290px;top:-330px;border-radius:50%;background:radial-gradient(circle,rgba(47,180,255,.18),transparent 62%);filter:blur(4px)}
+.hero-copy{position:relative;z-index:5;transform:translateZ(45px)}
+.hero h1{font-size:clamp(3.2rem,6vw,6.4rem)!important;letter-spacing:-.065em!important;line-height:.93!important;text-shadow:0 2px #fff,0 20px 38px rgba(7,45,76,.16)!important}
+.hero-visual{position:relative!important;min-height:650px!important;perspective:1800px!important;transform-style:preserve-3d!important}
+.hero-visual:before{content:"";position:absolute;inset:9% 4% 8%;border-radius:50%;border:1px solid rgba(7,91,157,.14);box-shadow:0 0 0 44px rgba(7,91,157,.035),0 0 0 100px rgba(7,91,157,.025),inset 0 0 70px rgba(7,91,157,.04);transform:rotateX(67deg) rotateZ(-12deg) translateZ(-30px);animation:orbitTilt 10s ease-in-out infinite}
+.hero-visual:after{content:"";position:absolute;inset:5%;background:linear-gradient(rgba(10,94,165,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(10,94,165,.055) 1px,transparent 1px);background-size:34px 34px;border-radius:28px;mask-image:linear-gradient(to bottom,transparent,#000 25%,#000 75%,transparent);transform:perspective(900px) rotateX(62deg) translateZ(-90px) translateY(80px);opacity:.8}
+.hero-card{width:430px!important;min-height:330px!important;padding:34px!important;z-index:10!important;border-radius:32px!important;background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(221,240,252,.82))!important;border:1px solid rgba(255,255,255,.98)!important;box-shadow:28px 30px 0 rgba(5,52,87,.08),0 55px 100px rgba(4,40,71,.30),inset 0 2px 0 #fff!important;transform:perspective(1500px) rotateY(-18deg) rotateX(8deg) rotateZ(1.5deg) translateZ(90px)!important;animation:commandFloat 7s ease-in-out infinite!important;backdrop-filter:blur(22px)}
+.hero-card .big{font-size:4.2rem!important;letter-spacing:-.07em!important}
+.hero-card .bar{height:12px!important;background:#d8e7f2!important;box-shadow:inset 0 3px 5px rgba(4,40,70,.12)}
+.hero-card .bar i{background:linear-gradient(90deg,#0876c9,#4bc5ff)!important;box-shadow:0 0 18px rgba(34,166,239,.4)}
+.hero-card:before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(125deg,rgba(255,255,255,.8),transparent 28%,rgba(60,194,255,.13) 62%,transparent 78%);pointer-events:none}
+.hero-card:after{content:"";position:absolute;left:8%;right:8%;bottom:-36px;height:30px;border-radius:50%;background:rgba(4,34,58,.28);filter:blur(20px);transform:translateZ(-100px)}
+.float-card{z-index:12!important;border-radius:22px!important;background:rgba(255,255,255,.82)!important;border:1px solid rgba(255,255,255,.9)!important;backdrop-filter:blur(18px);box-shadow:14px 18px 0 rgba(5,45,76,.08),0 30px 55px rgba(5,45,76,.20)!important}
+.float-top{right:-5px!important;top:17%!important;transform:perspective(900px) rotateY(-24deg) rotateX(10deg) rotateZ(4deg) translateZ(150px)!important;animation:floatTop 6s ease-in-out infinite}
+.float-bottom{left:-15px!important;bottom:12%!important;transform:perspective(900px) rotateY(24deg) rotateX(9deg) rotateZ(-4deg) translateZ(130px)!important;animation:floatBottom 6.5s ease-in-out infinite}
+.depth-node{z-index:15!important;width:64px!important;height:64px!important;border-radius:20px!important;background:linear-gradient(145deg,#fff,#d7edf9)!important;color:#07548f!important;border:1px solid #fff!important;box-shadow:10px 13px 0 rgba(5,47,80,.1),0 28px 45px rgba(5,47,80,.24)!important}
+.node-one{right:6%!important;bottom:7%!important}.node-two{left:7%!important;top:11%!important}
+.orbit-a{width:570px!important;height:230px!important;border:1px solid rgba(7,92,160,.18)!important;transform:translateZ(-20px) rotateX(66deg) rotateZ(-9deg)!important}.orbit-b{width:460px!important;height:460px!important;border:1px solid rgba(7,92,160,.11)!important;transform:translateZ(-40px) rotateX(67deg)!important}
+.stats div,.trust-strip div,.card,.scheme-grid article,.report-grid article,.process-grid article,.panel,.money div,.flow{border:1px solid rgba(255,255,255,.9)!important;background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(231,242,250,.82))!important;box-shadow:12px 15px 0 rgba(6,43,73,.045),0 26px 48px rgba(6,43,73,.11),inset 0 1px #fff!important;transform-style:preserve-3d}
+.card:hover,.scheme-grid article:hover,.report-grid article:hover,.process-grid article:hover{transform:translateY(-13px) rotateX(6deg) rotateY(-3deg) scale(1.018)!important;box-shadow:16px 22px 0 rgba(6,43,73,.06),0 34px 65px rgba(6,43,73,.17),inset 0 1px #fff!important}
+.map{box-shadow:0 30px 70px rgba(4,35,61,.17),inset 0 1px rgba(255,255,255,.15)!important}
+.fake-map{transform:perspective(1300px) rotateX(18deg) rotateY(-12deg) rotateZ(1deg) translateZ(30px)!important;border:1px solid rgba(255,255,255,.22);box-shadow:24px 32px 0 rgba(0,0,0,.12),0 50px 90px rgba(0,0,0,.34)!important}
+.fake-map span{filter:drop-shadow(0 7px 8px rgba(0,0,0,.3));animation:mapPin 2.8s ease-in-out infinite}
+.primary,.report,.search button{box-shadow:0 7px 0 #064e86,0 16px 28px rgba(4,65,112,.22)!important;transform:translateY(0);transition:.2s ease}.primary:hover,.report:hover,.search button:hover{transform:translateY(-3px);box-shadow:0 10px 0 #064e86,0 23px 35px rgba(4,65,112,.24)!important}
+@keyframes commandFloat{0%,100%{transform:perspective(1500px) rotateY(-18deg) rotateX(8deg) rotateZ(1.5deg) translate3d(0,0,90px)}50%{transform:perspective(1500px) rotateY(-12deg) rotateX(4deg) rotateZ(0deg) translate3d(0,-18px,115px)}}
+@keyframes floatTop{0%,100%{translate:0 0}50%{translate:8px -15px}}
+@keyframes floatBottom{0%,100%{translate:0 0}50%{translate:-8px 12px}}
+@keyframes commandSpin{to{transform:rotate(360deg)}}
+@keyframes orbitTilt{0%,100%{rotate:0deg;translate:0 0}50%{rotate:4deg;translate:0 -8px}}
+@keyframes mapPin{0%,100%{translate:0 0;scale:1}50%{translate:0 -9px;scale:1.15}}
+@media(max-width:800px){.hero{grid-template-columns:1fr!important}.hero h1{font-size:3.3rem!important}.hero-visual{min-height:540px!important}.hero-card{width:min(360px,88%)!important;transform:perspective(1000px) rotateY(-9deg) rotateX(5deg)!important}.float-top{right:0!important}.float-bottom{left:0!important}.orbit-a{width:390px!important}.orbit-b{width:330px!important;height:330px!important}.depth-node{display:none!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.hero-card{transform:none!important}}
