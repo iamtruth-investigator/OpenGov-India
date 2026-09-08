@@ -42,3 +42,8 @@ body{background:radial-gradient(circle at 18% 8%,rgba(80,190,255,.22),transparen
 .home .map-band h2{color:#fff!important;text-shadow:none!important}
 .home .map-band .section-intro{color:#c7d8e5!important}
 .home .map-band .section-label{color:#7edfff!important}
+.home .project-preview .project-head h2{color:#fff!important;text-shadow:none!important}
+.home .project-preview .section-intro{color:#c7d8e5!important}
+.home .project-preview .section-label{color:#7edfff!important}
+.home .project-preview .project-head a{color:#9cddff!important}
+.home .map-band .map-copy b{color:#fff!important}.home .map-band .map-copy p{color:#c7d8e5!important}
