@@ -39,11 +39,9 @@ body{background:radial-gradient(circle at 18% 8%,rgba(80,190,255,.22),transparen
 .card .tag[title="In Progress"]{background:#e6f0ff!important;color:#07529a!important}
 .card .tag[title="Near Completion"]{background:#e1f7f2!important;color:#066b5c!important}
 .card .tag[title="Delayed"]{background:#fff0e8!important;color:#9a3f08!important}
-.home .map-band h2{color:#fff!important;text-shadow:none!important}
-.home .map-band .section-intro{color:#c7d8e5!important}
-.home .map-band .section-label{color:#7edfff!important}
-.home .project-preview .project-head h2{color:#fff!important;text-shadow:none!important}
-.home .project-preview .section-intro{color:#c7d8e5!important}
-.home .project-preview .section-label{color:#7edfff!important}
-.home .project-preview .project-head a{color:#9cddff!important}
+.home .map-band h2,.home .project-preview .project-head h2{color:#fff!important;text-shadow:none!important}
+.home .map-band .section-intro,.home .project-preview .section-intro{color:#c7d8e5!important}
+.home .map-band .section-label,.home .project-preview .section-label{color:#7edfff!important;text-shadow:0 0 16px rgba(85,216,255,.14)!important}
 .home .map-band .map-copy b{color:#fff!important}.home .map-band .map-copy p{color:#c7d8e5!important}
+.home .project-preview .project-head a{color:#9cddff!important}
+@media(max-width:620px){.home .project-preview h2,.home .map-band h2{font-size:36px!important}.home .project-preview .section-label,.home .map-band .section-label{font-size:10px!important;letter-spacing:2px!important}}
