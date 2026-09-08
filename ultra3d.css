@@ -23,15 +23,12 @@ body{background:radial-gradient(circle at 18% 8%,rgba(80,190,255,.22),transparen
 @keyframes floatTop{0%,100%{translate:0 0}50%{translate:6px -10px}}@keyframes floatBottom{0%,100%{translate:0 0}50%{translate:-6px 9px}}@keyframes commandSpin{to{transform:rotate(360deg)}}@keyframes orbitTilt{0%,100%{rotate:0deg;translate:0 0}50%{rotate:3deg;translate:0 -5px}}@keyframes mapPin{0%,100%{translate:0 0;scale:1}50%{translate:0 -6px;scale:1.08}}
 @media(max-width:800px){.hero{grid-template-columns:1fr!important}.hero h1{font-size:3.3rem!important}.hero-visual{min-height:540px!important}.hero-card{width:min(360px,88%)!important;transform:perspective(1000px) rotateY(-9deg) rotateX(5deg)!important}.float-top{right:0!important}.float-bottom{left:0!important}.orbit-a{width:390px!important}.orbit-b{width:330px!important;height:330px!important}.depth-node{display:none!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.hero-card{transform:none!important}}
-/* Performance guardrails: preserve the 3D identity without forcing expensive blur/compositing. */
 @media (hover:none),(max-width:900px){.hero:before{animation:none}.hero-visual:before{animation:none}.hero-card,.float-top,.float-bottom{animation:none!important}}
 @media (max-width:600px){.hero-visual{perspective:1100px!important}.command-sky,.command-floor{opacity:.72}.hero-visual:after{opacity:.28}.hero-card{box-shadow:12px 14px 0 rgba(5,52,87,.05),0 24px 42px rgba(4,40,71,.16)!important}}
-/* Light homepage optimization: fewer off-screen paints and cheaper mobile effects. */
 .home .home-section,.home .evidence-section,.home .map-band,.home .project-preview{content-visibility:auto;contain-intrinsic-size:720px}
 .home .network,.home .map-card{contain:layout paint}
 @media(max-width:620px){.home .network{contain:layout paint;transform:scale(.82);margin-bottom:-55px}.home .network-core{box-shadow:0 0 0 1px rgba(101,221,255,.3),0 0 45px rgba(42,189,237,.22),inset 0 0 25px rgba(0,0,0,.3)}.home .node{backdrop-filter:none}.home .map-copy{backdrop-filter:none}}
 @media(min-width:621px) and (max-width:900px){.home .network{transform:scale(.92);transform-origin:center}.home .home-hero{padding-top:55px}}
-/* Contrast fixes: keep project cards readable on both dark and light surfaces. */
 .home .project-preview .card{background:linear-gradient(145deg,#0d2a43,#0a1e31)!important;color:#fff!important;border-color:rgba(130,214,247,.18)!important;box-shadow:0 18px 40px rgba(0,0,0,.22)!important}
 .home .project-preview .card h3{color:#fff!important;text-shadow:none!important}
 .home .project-preview .card p{color:#c2d3df!important}
@@ -42,7 +39,6 @@ body{background:radial-gradient(circle at 18% 8%,rgba(80,190,255,.22),transparen
 .card .tag[title="In Progress"]{background:#e6f0ff!important;color:#07529a!important}
 .card .tag[title="Near Completion"]{background:#e1f7f2!important;color:#066b5c!important}
 .card .tag[title="Delayed"]{background:#fff0e8!important;color:#9a3f08!important}
-/* Dark-band contrast: keep section heading and supporting copy readable. */
 .home .map-band h2{color:#fff!important;text-shadow:none!important}
 .home .map-band .section-intro{color:#c7d8e5!important}
 .home .map-band .section-label{color:#7edfff!important}
