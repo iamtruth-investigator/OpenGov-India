@@ -42,3 +42,7 @@ body{background:radial-gradient(circle at 18% 8%,rgba(80,190,255,.22),transparen
 .card .tag[title="In Progress"]{background:#e6f0ff!important;color:#07529a!important}
 .card .tag[title="Near Completion"]{background:#e1f7f2!important;color:#066b5c!important}
 .card .tag[title="Delayed"]{background:#fff0e8!important;color:#9a3f08!important}
+/* Dark-band contrast: keep section heading and supporting copy readable. */
+.home .map-band h2{color:#fff!important;text-shadow:none!important}
+.home .map-band .section-intro{color:#c7d8e5!important}
+.home .map-band .section-label{color:#7edfff!important}
