@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="OpenGov India secure account login">
+<title>Login | OpenGov India</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.auth-page{min-height:calc(100vh - 90px);display:grid;place-items:center;padding:50px 20px;background:radial-gradient(circle at 50% 0%,rgba(25,112,180,.18),transparent 45%)}
+.auth-shell{width:min(460px,100%);position:relative}
+.auth-card{padding:34px;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:rgba(5,18,32,.88);box-shadow:0 28px 80px rgba(0,0,0,.35);backdrop-filter:blur(18px)}
+.auth-brand{text-align:center;margin-bottom:26px}.auth-brand h1{margin:0;font-size:34px}.auth-brand h1 span{opacity:.55}.auth-brand p{margin:8px 0 0;opacity:.7}
+.auth-form{display:grid;gap:14px}.auth-form label{font-size:13px;font-weight:700;opacity:.8}.auth-form input{width:100%;box-sizing:border-box;padding:14px 15px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:inherit;outline:none}.auth-form input:focus{border-color:#69b7ff;box-shadow:0 0 0 3px rgba(105,183,255,.12)}
+.auth-actions{display:grid;gap:10px;margin-top:8px}.auth-actions button{cursor:pointer;border:0;border-radius:12px;padding:14px;font-weight:800}.auth-primary{background:#fff;color:#061a2d}.auth-secondary{background:rgba(255,255,255,.08);color:inherit}.auth-link{border:0;background:none;color:#8dccff;cursor:pointer;padding:8px}.auth-message{min-height:22px;margin:10px 0 0;font-size:13px;line-height:1.5}.auth-message.error{color:#ff9f9f}.auth-message.success{color:#91e6ad}.auth-message.info{opacity:.75}.auth-note{margin-top:20px;padding:13px;border-radius:12px;background:rgba(255,255,255,.04);font-size:12px;line-height:1.5;opacity:.72}.auth-back{display:block;text-align:center;margin-top:18px;color:inherit;opacity:.7}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js?v=20260908" defer></script>
+</head>
+<body data-auth-page="login">
+<header><div class="top"><span>🇮🇳 Independent civic transparency prototype</span><span>Secure account access</span></div><nav><a class="brand" href="index.html" aria-label="OpenGov India home">OpenGov<span>India</span></a><div class="links"><a href="projects.html">Projects</a><a href="funds.html">Funds</a><a href="schemes.html">Schemes</a><a href="reports.html">Reports</a><a href="map.html">Map</a><a href="dashboard.html">Dashboard</a></div><a class="report" href="report.html">Report an Issue</a></nav></header>
+<main class="auth-page"><div class="auth-shell"><section class="auth-card"><div class="auth-brand"><h1>OpenGov<span>India</span></h1><p>Sign in to your civic account</p></div><form class="auth-form" onsubmit="event.preventDefault();signIn()"><div><label for="email">Email address</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required></div><div><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" placeholder="Your password" required></div><div class="auth-actions"><button class="auth-primary" type="submit" data-auth-submit>Sign in</button><button class="auth-secondary" type="button" data-auth-submit onclick="signUp()">Create account</button></div></form><button class="auth-link" type="button" onclick="resetPassword()">Forgot password?</button><div id="authMessage" class="auth-message" aria-live="polite"></div><div class="auth-note"><strong>Prototype access:</strong> Authentication is powered by Supabase. Account access does not imply government affiliation or official authority.</div><a class="auth-back" href="index.html">← Back to OpenGov India</a></section></div></main>
+<footer><b>OpenGov India</b><span>Independent civic transparency prototype • Demo data only</span><span>Not affiliated with or endorsed by any government authority</span><span>© 2026</span></footer>
+</body></html>
