@@ -5,6 +5,9 @@
   if(!intro) return;
   const reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const seenKey='opengov_intro_seen_v1';
+  let alreadySeen=false;
+  try{alreadySeen=sessionStorage.getItem(seenKey)==='1'}catch(e){}
+  if(alreadySeen){intro.hidden=true;return}
   const message=intro.querySelector('[data-intro-message]');
   const messages=[
     'Development information, brought together.',
@@ -31,7 +34,8 @@
   let i=0;
   function next(){
     if(closed||!message) return;
-    message.animate([{opacity:1,transform:'translateY(0)'},{opacity:0,transform:'translateY(-5px)'}],{duration:220,fill:'forwards'}).onfinish=function(){
+    const fade=message.animate([{opacity:1,transform:'translateY(0)'},{opacity:0,transform:'translateY(-5px)'}],{duration:220,fill:'forwards'});
+    fade.onfinish=function(){
       i=Math.min(i+1,messages.length-1);
       message.textContent=messages[i];
       message.animate([{opacity:0,transform:'translateY(5px)'},{opacity:1,transform:'translateY(0)'}],{duration:320,fill:'forwards'});
