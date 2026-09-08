@@ -31,3 +31,14 @@ body{background:radial-gradient(circle at 18% 8%,rgba(80,190,255,.22),transparen
 .home .network,.home .map-card{contain:layout paint}
 @media(max-width:620px){.home .network{contain:layout paint;transform:scale(.82);margin-bottom:-55px}.home .network-core{box-shadow:0 0 0 1px rgba(101,221,255,.3),0 0 45px rgba(42,189,237,.22),inset 0 0 25px rgba(0,0,0,.3)}.home .node{backdrop-filter:none}.home .map-copy{backdrop-filter:none}}
 @media(min-width:621px) and (max-width:900px){.home .network{transform:scale(.92);transform-origin:center}.home .home-hero{padding-top:55px}}
+/* Contrast fixes: keep project cards readable on both dark and light surfaces. */
+.home .project-preview .card{background:linear-gradient(145deg,#0d2a43,#0a1e31)!important;color:#fff!important;border-color:rgba(130,214,247,.18)!important;box-shadow:0 18px 40px rgba(0,0,0,.22)!important}
+.home .project-preview .card h3{color:#fff!important;text-shadow:none!important}
+.home .project-preview .card p{color:#c2d3df!important}
+.home .project-preview .card .meta{color:#c2d3df!important;border-top-color:rgba(255,255,255,.14)!important}
+.home .project-preview .card .meta b{color:#fff!important}
+.home .project-preview .card .tag{background:#d9f5e5!important;color:#075c37!important;border:1px solid rgba(7,92,55,.12)!important}
+.card .tag[title="On Track"],.status-pill{background:#d9f5e5!important;color:#075c37!important;border-color:#b7e8cc!important}
+.card .tag[title="In Progress"]{background:#e6f0ff!important;color:#07529a!important}
+.card .tag[title="Near Completion"]{background:#e1f7f2!important;color:#066b5c!important}
+.card .tag[title="Delayed"]{background:#fff0e8!important;color:#9a3f08!important}
