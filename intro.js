@@ -1,6 +1,12 @@
 /* OpenGov India — cinematic story controller */
 (function(){
   'use strict';
+  /* Keep the premium look, but avoid expensive paint effects on the homepage. */
+  if(document.body && document.body.classList.contains('home')){
+    const perf=document.createElement('style');
+    perf.textContent='@media(max-width:900px){.home header,.home .node,.home .map-copy{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}.home .network-core{box-shadow:0 0 0 1px rgba(101,221,255,.3),0 0 35px rgba(42,189,237,.2),inset 0 0 24px rgba(0,0,0,.28)}.home .map-pin{box-shadow:0 0 0 5px rgba(85,216,255,.1),0 0 14px rgba(85,216,255,.75)}.home-hero:before,.map-card:before{opacity:.45}}@media(min-width:901px){.home main>section:not(.home-hero){content-visibility:auto;contain-intrinsic-size:720px}.home .network-core{box-shadow:0 0 0 1px rgba(101,221,255,.3),0 0 50px rgba(42,189,237,.22),inset 0 0 28px rgba(0,0,0,.3)}}';
+    document.head.appendChild(perf);
+  }
   const intro=document.getElementById('ogIntro'); if(!intro) return;
   const reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const seenKey='opengov_intro_seen_v3';
