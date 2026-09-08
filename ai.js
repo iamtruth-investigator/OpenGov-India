@@ -1,0 +1,2 @@
+async function runOpenGovGemini(prompt,sourceCount=0){const client=window.initSupabase?.();if(!client)throw new Error('Authentication service is not available.');const{data:{session}}=await client.auth.getSession();if(!session)throw new Error('Sign in is required.');const{data,error}=await client.functions.invoke('opengov-gemini',{body:{prompt,source_count:sourceCount}});if(error)throw new Error(error.message||'AI request failed.');if(data?.error)throw new Error(data.error);return data}
+window.runOpenGovGemini=runOpenGovGemini;
